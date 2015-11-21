@@ -3,6 +3,10 @@
     display: -webkit-flex;
 }
 
+h1 {
+    background-color: #33BEBE;
+    color:white;
+}
 * {
    outline: 1px solid red !important;
 }
@@ -18,6 +22,6 @@
 }
 
 .discription {
-	color:green;
+	color:#7C8B88;
 	max-width: 705px
 }
