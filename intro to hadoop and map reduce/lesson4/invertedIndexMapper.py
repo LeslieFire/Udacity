@@ -9,6 +9,7 @@ def mapper():
     
     specials = ',.!?:;"()<>[]#$=-/'
     trans = string.maketrans(specials, ' '*len(specials))
+    #trans = string.maketrans(specials, ' '*len(specials))
 
     for line in reader:
     	if len(line) == 19:

@@ -7,6 +7,7 @@ import sys
 def reducer():
 	count = 0
 	oldKey = None
+	col = []
 
 	for line in sys.stdin:
 		data = line.strip().split("\t")
@@ -18,13 +19,19 @@ def reducer():
 			print thisKey, "\t", thisValue
 
 		if oldKey and oldKey != thisKey:
-			if oldKey == "fantastic":
-				print oldKey,"\t",count
+			#if oldKey == "fantastic":
+			#	print oldKey,"\t",count
+			col.sort(key = lambda x: long(x), reverse = True)
+			for i in range(len(col)):
+				print oldKey, "\t", col[i]
+			
 			oldKey = thisKey
 			count = 0
+			del col[:]
 
 		oldKey = thisKey
 		count += 1
+		col.append(thisValue)
 
 	if oldKey != None:
 		print oldKey,"\t",count

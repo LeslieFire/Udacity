@@ -32,9 +32,9 @@ def reducer():
         		oldUserId = curUserId
 
         	if data[1] == 'A':
-			author_id, clasfy, reputation, gold, silver, bronze = data
+				author_id, clasfy, reputation, gold, silver, bronze = data
         	elif data[1] == 'B':
-			author_id, clasfy, id, title, tagnames, node_type, parenet_id, abs_parent_id, added_at, score = data
+				author_id, clasfy, id, title, tagnames, node_type, parenet_id, abs_parent_id, added_at, score = data
         	oldUserId = curUserId 
 
     	if oldUserId != None:
